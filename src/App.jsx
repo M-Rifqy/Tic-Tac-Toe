@@ -81,8 +81,8 @@ function calculateWinner(squares) {
     // const b = lines[i][1]
     // const c = lines[i][2]
     const [a, b, c] = lines[i]
-    if (squares[a] && squares[a] === squares[b] && squares[c]) {
-      return squares[a]
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
     }
   }
   return false
