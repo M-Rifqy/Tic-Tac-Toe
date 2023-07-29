@@ -39,10 +39,15 @@ export default function Board() {
     status = `Now is "${xIsNext ? "X" : "O"}" Turn`
   }
 
+  function handleRefresh() {
+    window.location.reload();
+  }
+
   return (
     <>
       <div>
         <h1>{status}</h1>
+        {winner && <button onClick={handleRefresh}>Play Again!</button>}
       </div>
       <div className='board'>
         <Square value={ squares[0] } onSquareClick={ () => handleClick(0) } />
